@@ -1,5 +1,1 @@
-Here you can say lots of fun things about your site.
-
-Maybe say a some things about yourself.
-
-Or maybe what you plan to blog about.
+Hi, I'm Claire Sarraillé and this is my blog for chronicling my projects for the data science bootcamp I'm enrolled in through Flatiron School. Enjoy!

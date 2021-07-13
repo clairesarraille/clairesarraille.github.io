@@ -205,7 +205,7 @@ This humble bit of code converts our boolean dataframe of 18 categories of genre
 genre_matrix = np.dot(bin_genres.T, bin_genres)
 ```
 
-For example, the first list in the matrix below represents the number of times Drama co-occurs with every other genre in the order of the columns: Drama with Drama, Drama with Comedy, Drama with Action, Drama with Thriller, and so on. Thus, it makes sense why the very first value in the first list is 246, because that's the total number of times Drama occurs. The very last value in the very last list is 4, because that's the number of times Western occurs
+For example, the first list in the matrix below represents the number of times Drama co-occurs with every other genre in the order of the columns: Drama with Drama, Drama with Comedy, Drama with Action, Drama with Thriller, and so on. Thus, it makes sense why the very first value in the first list is 246, because that's the total number of times Drama occurs. The very last value in the very last list is 4 (not shown), because that's the number of times Western occurs
 
 ```
 genre_matrix
@@ -216,6 +216,7 @@ array([[246,  59,  33,  62,  21,  15,  11,  16,  16,  40,   4,  43,  24,
           6,  15,   2,   0,   0],
        [ 33,  46, 192,  64,  78,  13,  12,  33,  62,  44,  11,   3,   7,
          11,   0,   7,   0,   1],
+(...)
 ```
 
 At last, this matrix could be converted to a Pandas dataframe and visualized with a heatmap:\

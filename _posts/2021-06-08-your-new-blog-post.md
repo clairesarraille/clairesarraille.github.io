@@ -233,13 +233,13 @@ sn.heatmap(genre_frequency, cmap = "Greens").set(title='Genre Co-occurrence for 
 plt.xticks(rotation=50)
 ```
 
-![genre](https://user-images.githubusercontent.com/71570329/121881113-a8f13080-ccc3-11eb-8f0d-d27da7ab297b.png)
+![genre](https://user-images.githubusercontent.com/71570329/125541508-7e30b64e-0e02-4fb1-a5c6-024215207fd7.png)
 
 
 
 I repeated the whole process of munging, boolean-masking, and vector multiplication for production company!
 
-![prod](https://user-images.githubusercontent.com/71570329/121887126-308e6d80-cccb-11eb-95ed-595beb0aaeeb.png)
+![prod_company](https://user-images.githubusercontent.com/71570329/125541478-4ab3b657-d0e1-40f7-88ae-204ee8b40e91.png)
 
 
 ### Conclusion
@@ -250,4 +250,8 @@ I had an amazing time exploring these data and learned an incredible amount in a
 
 This product uses the TMDb API but is not endorsed or certified by TMDb
 ![attribution](https://user-images.githubusercontent.com/71570329/121875052-ddadb980-ccbc-11eb-9f8d-0c3ef39b45fd.png)
+
+
+
+
 

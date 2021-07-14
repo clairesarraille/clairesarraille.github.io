@@ -144,7 +144,7 @@ df[['revenue','budget','profit','popularity','runtime']].describe()
 df_q3 = df[(df['revenue'] >= 9289990)].copy()
 ```
 
-## Visualize Frequency and Co-Occurence of Genre
+## Visualize Frequency and Co-occurrence of Genre
 
 At this point, I was super excited to finally visualize my carefully cleaned & curated dataset :) However, there was still some serious data transformation necessary to deal with the list-of-string datastructure I had stored for genre and production company. At this point in my work, I learned invaluable techniques for dealing with list values in columns from Max Hilsdorf's wonderful and detailed tutorial on the subject: [Dealing with List Values in Pandas Dataframes](https://towardsdatascience.com/dealing-with-list-values-in-pandas-dataframes-a177e534f173). I was incredibly grateful to have his blog post and Jupyter Notebook tutorial as a reference. It's amazing how much you can learn from well-documented code! I had a lot of fun figuring out what he had done and finally feeling like I could "see" what was happening in the process of numpy's dot product operation. The main idea of the process is to take a list of strings, and convert it to a matrix of boolean values, where each column is one unique string inside the list. This involves first creating a giant list with all the instances of each string (so each string will repeat the number of times it appears in a field within the original dataframe. At that point, .value_counts() works on the big list of strings. For genre, these are the value counts I got:
 
@@ -194,7 +194,7 @@ def make_boolean_mask(p_series, u_series):
 genre_boolean = make_boolean_mask(df_q3["genre"], unique_genres.keys()) 
 ```
 
-From this dataframe of boolean values, the next step was to convert from T/F to 0/1. And finally, to create a matrix of all co-occurences of our category (in this case, genre).
+From this dataframe of boolean values, the next step was to convert from T/F to 0/1. And finally, to create a matrix of all co-occurrences of our category (in this case, genre).
 
 ![mask](https://user-images.githubusercontent.com/71570329/121886606-73037a80-ccca-11eb-9e26-080f7e29109d.png)
 
@@ -205,7 +205,7 @@ This humble bit of code converts our boolean dataframe of 18 categories of genre
 genre_matrix = np.dot(bin_genres.T, bin_genres)
 ```
 
-For example, the first list in the matrix below represents the number of times Drama co-occurs with every other genre in the order of the columns: Drama with Drama, Drama with Comedy, Drama with Action, Drama with Thriller, and so on. Thus, it makes sense why the very first value in the first list is 246, because that's the total number of times Drama occurs. The very last value in the very last list is 4 (not shown), because that's the number of times Western occurs
+For example, the first list in the matrix below represents the number of times Drama co-occurs with every other genre in the order of the columns: Drama with Drama, Drama with Comedy, Drama with Action, Drama with Thriller, and so on. Thus, it makes sense why the very first value in the first list is 246, because that's the total number of times Drama occurs. The very last value in the very last list is 4 (not shown), because that's the number of times Western occurs.
 
 ```
 genre_matrix
@@ -219,7 +219,7 @@ array([[246,  59,  33,  62,  21,  15,  11,  16,  16,  40,   4,  43,  24,
 (...)
 ```
 
-At last, this matrix could be converted to a Pandas dataframe and visualized with a heatmap:\
+At last, this matrix could be converted to a Pandas dataframe and visualized with a heatmap:
 
 ```
 # Convert Matrix to DataFrame:
@@ -227,9 +227,9 @@ genre_frequency = pd.DataFrame(genre_matrix, columns = unique_genres.keys(), ind
 ```
 
 ```
-# Used seaborn to visualize the co-occurence of genres for Q3 Movies:
+# Used seaborn to visualize the co-occurrence of genres for Q3 Movies:
 fig, ax = plt.subplots(figsize = (13,7))
-sn.heatmap(genre_frequency, cmap = "Greens").set(title='Genre Co-Occurence for Q3 Profit Movies on TMDb, 2016-2021')
+sn.heatmap(genre_frequency, cmap = "Greens").set(title='Genre Co-occurrence for Q3 Profit Movies on TMDb, 2016-2021')
 plt.xticks(rotation=50)
 ```
 
@@ -237,14 +237,14 @@ plt.xticks(rotation=50)
 
 
 
-I repeated the whole process of munging, boolean-masking, and vector multipication for production company!
+I repeated the whole process of munging, boolean-masking, and vector multiplication for production company!
 
 ![prod](https://user-images.githubusercontent.com/71570329/121887126-308e6d80-cccb-11eb-95ed-595beb0aaeeb.png)
 
 
 ### Conclusion
 What I love about these heat maps is how information-dense they are while remaining easy to read and intuitive. As you can see, a lot of work goes into creating something seemingly so simple.
-We can observe from the genre and production company heat maps that some of the highest-profit movies in the past 5 years are Dramas, Comedies and Action films produced by Universal, Warner Bros, and Columbia. Even more interesting are the winning combinations of these attributes. 20th Century Fox paired with Columbia, Sony paired with Warner Bros., and TSG with Lionsgate appear to be synergystic forces. Likewise, we can observe patterns of genre that appear to garner the greatest rewards at the box office, such as action-adventure, historical dramas, and family comedies.
+We can observe from the genre and production company heat maps that some of the highest-profit movies in the past 5 years are Dramas, Comedies and Action films produced by Universal, Warner Bros, and Columbia. Even more interesting are the winning combinations of these attributes. 20th Century Fox paired with Columbia, Sony paired with Warner Bros., and TSG with Lionsgate appear to be synergistic forces. Likewise, we can observe patterns of genre that appear to garner the greatest rewards at the box office, such as action-adventure, historical dramas, and family comedies.
 
 I had an amazing time exploring these data and learned an incredible amount in a short period. Stay tuned for more project posts in the upcoming months.
 

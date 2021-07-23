@@ -1,0 +1,78 @@
+Skip to content
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@clairesarraille 
+jekyll
+/
+minima
+57
+2.3k2.4k
+Code
+Issues
+10
+Pull requests
+23
+Actions
+Projects
+Security
+Insights
+minima/_layouts/home.html
+@jekyllbot
+jekyllbot style: Subscribe feed link (#300)
+Latest commit d0cedd9 on Nov 4, 2018
+ History
+ 6 contributors
+@ashmaroli@parkr@jekyllbot@ward@ankitrgadiya@dret
+34 lines (29 sloc)  1016 Bytes
+  
+---
+layout: default
+---
+
+<div class="home">
+  {%- if page.title -%}
+    <h1 class="page-heading">{{ page.title }}</h1>
+  {%- endif -%}
+
+  {{ content }}
+
+  {%- if site.posts.size > 0 -%}
+    <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
+    <ul class="post-list">
+      {%- for post in site.posts -%}
+      <li>
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        <span class="post-meta">{{ post.date | date: date_format }}</span>
+        <h3>
+          <a class="post-link" href="{{ post.url | relative_url }}">
+            {{ post.title | escape }}
+          </a>
+        </h3>
+        {%- if site.show_excerpts -%}
+          {{ post.excerpt }}
+        {%- endif -%}
+      </li>
+      {%- endfor -%}
+    </ul>
+
+  {%- endif -%}
+
+</div>
+© 2021 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+Loading complete

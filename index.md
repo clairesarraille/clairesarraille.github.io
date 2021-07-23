@@ -1,1 +1,1 @@
-Hi, I'm Claire Sarraillé and this is my blog for chronicling my projects for the data science bootcamp I'm enrolled in through Flatiron School. Enjoy!
+Hi, I'm Claire Sarraillé! Here you can read about my projects for Flatiron School - where I'm a data science student slated to graduate October 2021. Enjoy!

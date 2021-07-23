@@ -38,5 +38,5 @@ defaults:
   - scope:
       path: ""
       type: post
-#    values:
-#      tags: Other
+    values:
+      tags: Data Science

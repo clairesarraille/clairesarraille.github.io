@@ -7,7 +7,7 @@ description: "My Projects while a Student at Flatiron School" # This will show u
 #email: "example@mail.com"
 #twitter_username: "twitteruser"
 github_username: "clairesarraille"
-#linkedin_username: "linkedinuser"
+linkedin_username: "claire-sarraille"
 #facebook_username: username
 #flickr_username: username
 #instagram_username: username
@@ -20,7 +20,7 @@ github_username: "clairesarraille"
 #########################################################################################
 theme: "minima"
 
-rss: rss
+#rss: rss
 
 kramdown:
   syntax_highlighter_opts:

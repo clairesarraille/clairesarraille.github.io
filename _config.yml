@@ -6,8 +6,8 @@ description: "My Projects while a Student at Flatiron School" # This will show u
 # All of these are optional and can be removed or commented out
 #email: "example@mail.com"
 #twitter_username: "twitteruser"
-github_username: "clairesarraille"
 linkedin_username: "claire-sarraille"
+github_username: "clairesarraille"
 #facebook_username: username
 #flickr_username: username
 #instagram_username: username
@@ -20,7 +20,7 @@ linkedin_username: "claire-sarraille"
 #########################################################################################
 theme: "minima"
 
-rss: rss
+#rss: rss
 
 kramdown:
   syntax_highlighter_opts:

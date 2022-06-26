@@ -3,7 +3,7 @@
 ![q3](https://user-images.githubusercontent.com/71570329/121889302-ed81c980-cccd-11eb-9350-b0a8f84acb32.png)
 
 
-My first data science project with Flatiron School is an analysis of movie success in terms of net revenue (profit) from 2016-June 2021. Imagining that I was helping develop early R&D for an upcoming movie studio, I started with a collection of the 3,000 highest revenue movies of 2016-2021. I threw out those not originally shot in English, and any missing a genre or production company. I further narrowed the scope to the upper quartile of profit, resulting in a neat 606 titles to focus on for the majority of the visualizations.
+This exploratory data analysis project measures movie success in terms of net revenue (profit) during the period 2016-2021. Imagining that I was helping develop early R&D for an upcoming movie studio, I started with a collection of the 3,000 highest revenue movies of 2016-2021. I threw out those not originally shot in English, and any missing a genre or production company. I further narrowed the scope to the upper quartile of profit, resulting in a neat 606 titles to focus on for the majority of the visualizations.
 
 Feel free to fork my [project repo](https://github.com/clairesarraille/mod1finproj) if you'd like to follow along and examine the code more closely. If you're a relative newbie to data science like I am, you'll likely enjoy the level of documentation and commenting in my Jupyter Notebook :)
 
